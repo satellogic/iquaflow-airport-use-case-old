@@ -1,14 +1,17 @@
 # Airplane Detection IQF Experiment
 
 Airplaines can be detected from satellite images by AI algorithms. The objective of this study is to analize the effect of image compression on the detection performace.
-For more information see [iqf-wiki-airplanes](https://publicgitlab.satellogic.com/iqf/iq_tool_box-/-/wikis/Home/6.%20Use%20cases#airport-use-case)
 
 The core training code is an adaptation from [source repo](https://github.com/jwyang/faster-rcnn.pytorch)
 
+To make it compatible to your GPU hardware:
+ - See comments [here](https://github.com/jwyang/faster-rcnn.pytorch#compilation) about your GPU hardware.
+ - Setup cuda version in the pytorch=0.4.0 installation within the Dockerfile
+
 To reproduce the experiments:
 
-1. `git clone git@publicgitlab.satellogic.com:iqf/airport-use-case.git`
-2. `cd iq-airport-use-case`
+1. `git clone git@publicgitlab.satellogic.com:iqf/iquaflow-airport-use-case.git`
+2. `cd iquaflow-airport-use-case`
 3. Then build the docker image with `make build`. This will also download the dataset in `./dataset` as well as these weights:
     ```
     ./data/pretrained_model/resnet101_caffe.pth
@@ -18,7 +21,7 @@ To reproduce the experiments:
     ```
 4. In order to execute the experiments:
     - `make dockershell` (\*)
-    - Inside the docker terminal execute `python ./IQF_experiment.py`
+    - Inside the docker terminal execute `python ./iqf_experiment.py`
 5. Start the mlflow server by doing `make mlflow` (\*)
 6. Notebook examples can be launched and executed by `make notebookshell NB_PORT=[your_port]"` (\**)
 7. To access the notebook from your browser in your local machine you can do:
