@@ -1,3 +1,6 @@
+# *This use case is under construction. The dataset is not available yet.*
+
+
 # Airplane Detection IQF Experiment
 
 Airplaines can be detected from satellite images by AI algorithms. The objective of this study is to analize the effect of image compression on the detection performace.
