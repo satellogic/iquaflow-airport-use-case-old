@@ -1,4 +1,4 @@
-# *This use case is under construction. The dataset is not available yet.*
+# *This use case is obsolete, see the new version: [airplane-use-case](https://github.com/satellogic/iquaflow-airplane-yolov5-use-case)*
 
 
 # Airplane Detection IQF Experiment
